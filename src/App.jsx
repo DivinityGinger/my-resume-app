@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Certifications from './components/Certifications';
 import Contact from "./components/Contact";
+import { Analytics } from "@vercel/analytics/react"; // ← ADD THIS
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -39,6 +40,8 @@ function App() {
         <Certifications />
         <Contact />
       </div>
+
+      <Analytics /> {/* ← ADD THIS HERE */}
     </div>
   );
 }
